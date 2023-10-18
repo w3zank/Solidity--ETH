@@ -39,7 +39,7 @@ contract LotteryPot {
     }
 
     function randomSelection() private returns(uint) {
-        //require(msg.sender == lotteryPurse, "You cannot proceed with following action");
+        require(msg.sender == lotteryPurse, "You cannot proceed with following action");
         uint winIndex;
         
         //encode timestamp, difficulty, address and nonce to gain a unique uint256 seed
